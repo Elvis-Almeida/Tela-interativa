@@ -4,21 +4,21 @@
     font-size: 1px;
 }
 body{
-    background-color: rgb(30, 255, 255);
+    background-color: #20b2aa;
     overflow: hidden;
 }
 #container{
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(75, 75, 75);
+    background-color: #20b2aa;
 }
 .blocos{
     display: inline-block;
     position: relative;
     /* width: 1%;
     height: 1%; */
-    background-color: lightseagreen;
+    background-color: #20b2aa;
     text-align: center;
     user-select: none;
 }

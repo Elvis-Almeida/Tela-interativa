@@ -23,7 +23,7 @@ function contruirTela(resolucao) {
         let tamanhoBloco = (altura/resolucao)-0.2;
         let quantidadeX = (largura/tamanhoBloco)-1; 
 
-        for (let i = 0; i < resolucao; i++) {
+        for (let i = 0; i < resolucao+2; i++) {
             for (let j = 0; j < quantidadeX; j++) { 
                 temp += "<div style='width: " + tamanhoBloco + "px; height: " + tamanhoBloco + "px;'   onclick='acionar(this,1,1,1,1)' class='blocos' id='l" + i + "-c" + j + "'>" + '.' +"</div>";
             };
@@ -60,10 +60,10 @@ function acionar(bloco, ctl1, ctl2, ctl3, ctl4){
     
     bloco.style.backgroundColor = 'red'
     
-    let b1 = 'l'+ (parseInt(posicoes[0])+1) +'-c'+ (parseInt(posicoes[1]))
-    let b2 = 'l'+ (parseInt(posicoes[0])-1) +'-c'+ (parseInt(posicoes[1]))
-    let b3 = 'l'+ (parseInt(posicoes[0])) +'-c'+ (parseInt(posicoes[1])+1)
-    let b4 = 'l'+ (parseInt(posicoes[0])) +'-c'+ (parseInt(posicoes[1])-1)
+    let b1 = 'l'+ (parseInt(posicoes[0])+1) +'-c'+ (parseInt(posicoes[1]));
+    let b2 = 'l'+ (parseInt(posicoes[0])-1) +'-c'+ (parseInt(posicoes[1]));
+    let b3 = 'l'+ (parseInt(posicoes[0])) +'-c'+ (parseInt(posicoes[1])+1);
+    let b4 = 'l'+ (parseInt(posicoes[0])) +'-c'+ (parseInt(posicoes[1])-1);
 
     if (document.getElementById(b1) && ctl1 && document.getElementById(b1).style.backgroundColor != "red"){
         setTimeout(function () {acionar(document.getElementById(b1), 1,0,1,1)}, 50);
@@ -79,7 +79,7 @@ function acionar(bloco, ctl1, ctl2, ctl3, ctl4){
     }
 
     setTimeout(function () {
-        bloco.style.backgroundColor = 'lightseagreen'
+        bloco.style.backgroundColor = '#20b2aa'
     }, 250)
     
 }
